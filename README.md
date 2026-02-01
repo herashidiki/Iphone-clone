@@ -1,16 +1,61 @@
-# React + Vite
+# iPhone 15 Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **fully responsive iPhone 15 clone** built with **React**, featuring **3D models with Three.js**, smooth **GSAP animations**, and **TailwindCSS** styling. Explore interactive iPhone views, color and size selection, video highlights, and scroll-based animations just like the official Apple website.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Highlights
 
-## React Compiler
+- **3D Interactive iPhone Model:** Built with **Three.js** and `@react-three/fiber`, allowing rotation and zoom control.  
+- **Smooth Animations:** Transitions and scroll-triggered effects using **GSAP**.  
+- **Responsive Design:** Optimized for **mobile, tablet, and desktop** using TailwindCSS.  
+- **Video Highlights & Carousels:** Showcase iPhone features with autoplay videos and interactive carousels.  
+- **Color & Size Selection:** Dynamically change iPhone color and model size.  
+- **Fast & Modern Stack:** Built with **React**, **TailwindCSS**, and deployed on **Vercel**.  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📸 Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Place your screenshots in `public/screenshots/`:
+
+
+
+
+
+<img width="302" height="667" alt="Screenshot 2026-02-01 192328" src="https://github.com/user-attachments/assets/99b80d63-1d98-4987-9ed1-5dcc6d80f2a4" />
+
+
+
+<img width="264" height="685" alt="Screenshot 2026-02-01 192340" src="https://github.com/user-attachments/assets/abb02945-f5a8-4dfe-921d-0e9909f37c4a" />
+
+
+
+*
+
+---
+
+## 🚀 Live Demo
+
+Check the project live on **Vercel**: 
+  [   https://iphone-clone-ecru.vercel.app/ ]
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React  
+- **Styling:** TailwindCSS  
+- **3D Models & Animation:** Three.js, @react-three/fiber, GSAP  
+- **Deployment:** Vercel  
+
+---
+
+## 📂 Installation
+
+```bash
+git clone https://github.com/yourusername/iphone-clone.git
+cd iphone-clone
+npm install
+npm run dev
+
