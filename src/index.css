@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "tailwindcss";
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  width: 100dvw;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: #000;
+  user-select: none;
+}
+
+canvas {
+  touch-action: none;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+@utility screen-max-width {
+  margin-inline: auto;
+  position: relative;
+  max-width: 1120px;
+}
+
+/* =========================
+   UTILITIES (v4 WAY)
+========================= */
+@utility flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@utility nav-height {
+  height: calc(100vh - 60px);
+}
+
+@utility btn {
+  padding-inline: 1.25rem; /* px-5 */
+  padding-block: 0.5rem;   /* py-2 */
+  margin-block: 1.25rem;
+  border-radius: 1.5rem;
+  background-color: rgb(37 99 235);
+  border: 1px solid transparent;
+  transition: background-color 200ms, border-color 200ms;
+}
+
+@utility btn-hover {
+  &:hover {
+    background-color: transparent;
+    border-color: rgb(37 99 235);
+  }
+}
+
+@utility common-padding {
+  padding-inline: 1.25rem;
+  padding-block: 5rem;
+}
+
+@utility g_fadeIn {
+  opacity: 0;
+  transform: translateY(100px);
+}
