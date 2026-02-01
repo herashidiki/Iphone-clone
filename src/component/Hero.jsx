@@ -20,10 +20,7 @@ const Hero = () => {
 
   useEffect(() => {
     window.addEventListener('resize', handleVideoSrcSet)
-
-    return () => {
-      window.removeEventListener('resize', handleVideoSrcSet)
-    }
+    return () => window.removeEventListener('resize', handleVideoSrcSet)
   }, [])
 
   useGSAP(() => {
@@ -58,15 +55,15 @@ const Hero = () => {
 
   return (
     <section className="w-full nav-height bg-black relative">
-      <div className="h-5/6 w-full flex-center flex-col">
-        <p id="hero" className="hero-title opacity-0 translate-y-10">
+      <div className="h-[80vh] sm:h-[85vh] md:h-[90vh] lg:h-[95vh] w-full flex flex-col items-center justify-center">
+        <p id="hero" className="hero-title opacity-0 translate-y-10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center">
           iPhone 15 Pro
         </p>
 
-        <div className="md:w-10/12 w-9/12">
+        <div className="w-full md:w-10/12 lg:w-9/12 mt-6">
           <video
             ref={videoRef}
-            className="pointer-events-none"
+            className="pointer-events-none w-full h-auto rounded-xl"
             autoPlay
             muted
             playsInline
@@ -79,10 +76,10 @@ const Hero = () => {
 
       <div
         id="cta"
-        className="flex flex-col items-center opacity-0 translate-y-20"
+        className="flex flex-col items-center opacity-0 translate-y-20 mt-6"
       >
-        <a href="#highlights" className="btn">Buy</a>
-        <p className="font-normal text-xl">From $199/month or $999</p>
+        <a href="#highlights" className="btn px-6 py-2 text-sm sm:text-base md:text-lg">Buy</a>
+        <p className="font-normal text-sm sm:text-base md:text-xl mt-2 text-center">From $199/month or $999</p>
       </div>
     </section>
   )

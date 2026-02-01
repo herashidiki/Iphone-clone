@@ -1,6 +1,6 @@
+import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import React, { useRef } from 'react'
-import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
 import { animateWithGsap } from '../utils/animations'
@@ -25,7 +25,6 @@ const Features = () => {
           trigger: containerRef.current,
           start: 'top 80%',
           once: true,
-          markers: false, // set true for debugging
         },
         onStart: () => {
           const video = videoRef.current
@@ -44,7 +43,6 @@ const Features = () => {
           scrollTrigger: {
             trigger: '#features_title',
             start: 'top 85%',
-            markers: false,
           },
         }
       )
@@ -58,7 +56,6 @@ const Features = () => {
             trigger: '.feature-video-container',
             start: 'top 80%',
             scrub: 1,
-            markers: false,
           },
         }
       )
@@ -71,7 +68,6 @@ const Features = () => {
           scrollTrigger: {
             trigger: '.feature-text-container',
             start: 'top 85%',
-            markers: false,
           },
           stagger: 0.2,
         }
@@ -85,88 +81,86 @@ const Features = () => {
   return (
     <section
       ref={containerRef}
-      className="h-full common-padding bg-zinc relative"
+      className="common-padding bg-zinc relative overflow-hidden"
     >
-      <div className="screen-max-width">
-        <div className="mb-12 w-full">
-          <h1 id="features_title" className="section-heading">
+      <div className="screen-max-width mx-auto flex flex-col gap-12">
+
+        {/* TITLE */}
+        <div className="mb-6 w-full">
+          <h1
+            id="features_title"
+            className="section-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+          >
             Explore the full story.
           </h1>
         </div>
 
-        <div className="flex flex-col justify-center items-center">
-          <div className="mt-32 mb-24 pl-24">
-            <h2 className="text-5xl lg:text-7xl font-semibold text-white">
+        {/* HERO TEXT */}
+        <div className="flex flex-col items-center gap-12 sm:gap-16">
+          <div className="flex flex-col items-start px-4 sm:px-0 text-center sm:text-left">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white leading-tight">
               iPhone.
             </h2>
-            <h2 className="text-5xl lg:text-7xl font-semibold text-white">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white leading-tight">
               Forged in titanium.
             </h2>
           </div>
 
-          <div className="flex-center flex-col sm:px-10">
-            {/* VIDEO */}
-            <div className="relative h-[50vh] w-full flex items-center">
-              <video
-                id="exploreVideo"
-                ref={videoRef}
-                className="w-full h-full object-cover object-center rounded-xl"
-                preload="auto"
-                muted
-                playsInline
-              >
-                <source src={exploreVideo} type="video/mp4" />
-              </video>
+          {/* VIDEO */}
+          <div className="relative w-full max-w-5xl h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] flex items-center rounded-xl overflow-hidden">
+            <video
+              ref={videoRef}
+              className="w-full h-full object-cover object-center"
+              preload="auto"
+              muted
+              playsInline
+            >
+              <source src={exploreVideo} type="video/mp4" />
+            </video>
+          </div>
+
+          {/* IMAGES */}
+          <div className="feature-video-container flex flex-col sm:flex-row gap-6 w-full">
+            <div className="overflow-hidden flex-1 h-64 sm:h-[50vh] rounded-xl">
+              <img
+                src={explore1Img}
+                alt="titanium"
+                className="feature-video g_grow w-full h-full object-cover"
+              />
             </div>
-
-            <div className="flex flex-col w-full relative mt-24">
-              {/* IMAGES */}
-              <div className="feature-video-container flex gap-6 mb-24">
-                <div className="overflow-hidden flex-1 h-[50vh] rounded-xl">
-                  <img
-                    src={explore1Img}
-                    alt="titanium"
-                    className="feature-video g_grow w-full h-full object-cover"
-                  />
-                </div>
-
-                <div className="overflow-hidden flex-1 h-[50vh] rounded-xl">
-                  <img
-                    src={explore2Img}
-                    alt="titanium 2"
-                    className="feature-video g_grow w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-
-              {/* TEXT */}
-              <div className="feature-text-container space-y-10 max-w-3xl mx-auto">
-                <p className="feature-text g_text text-lg leading-relaxed text-zinc-400">
-                  iPhone 15 Pro is{' '}
-                  <span className="text-white font-medium">
-                    the first iPhone to feature an aerospace-grade titanium
-                    design
-                  </span>
-                  , engineered with the same alloy used in{' '}
-                  <span className="text-zinc-300">
-                    spacecraft sent on missions to Mars
-                  </span>
-                  .
-                </p>
-
-                <p className="feature-text g_text text-lg leading-relaxed text-zinc-400">
-                  Titanium delivers{' '}
-                  <span className="text-white font-medium">
-                    our lightest Pro models ever
-                  </span>
-                  , while maintaining{' '}
-                  <span className="text-zinc-300">
-                    exceptional strength, durability, and performance
-                  </span>
-                  — designed for professionals who demand more.
-                </p>
-              </div>
+            <div className="overflow-hidden flex-1 h-64 sm:h-[50vh] rounded-xl">
+              <img
+                src={explore2Img}
+                alt="titanium 2"
+                className="feature-video g_grow w-full h-full object-cover"
+              />
             </div>
+          </div>
+
+          {/* TEXT */}
+          <div className="feature-text-container space-y-6 sm:space-y-8 max-w-3xl mx-auto px-4 sm:px-0 text-center sm:text-left">
+            <p className="feature-text g_text text-lg leading-relaxed text-zinc-400">
+              iPhone 15 Pro is{' '}
+              <span className="text-white font-medium">
+                the first iPhone to feature an aerospace-grade titanium design
+              </span>
+              , engineered with the same alloy used in{' '}
+              <span className="text-zinc-300">
+                spacecraft sent on missions to Mars
+              </span>.
+            </p>
+
+            <p className="feature-text g_text text-lg leading-relaxed text-zinc-400">
+              Titanium delivers{' '}
+              <span className="text-white font-medium">
+                our lightest Pro models ever
+              </span>
+              , while maintaining{' '}
+              <span className="text-zinc-300">
+                exceptional strength, durability, and performance
+              </span>
+              — designed for professionals who demand more.
+            </p>
           </div>
         </div>
       </div>
