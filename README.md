@@ -33,7 +33,8 @@ Place your screenshots in `public/screenshots/`:
 
 *
 
----
+---<img width="264" height="685" alt="Screenshot 2026-02-01 192340" src="https://github.com/user-attachments/assets/f06b5d17-7263-4451-ab1e-bf40de9c97a5" />
+
 
 ## 🚀 Live Demo
 
