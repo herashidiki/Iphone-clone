@@ -25,15 +25,13 @@ Place your screenshots in `public/screenshots/`:
 
 <img width="302" height="667" alt="Screenshot 2026-02-01 192328" src="https://github.com/user-attachments/assets/99b80d63-1d98-4987-9ed1-5dcc6d80f2a4" />
 
-
-
 <img width="264" height="685" alt="Screenshot 2026-02-01 192340" src="https://github.com/user-attachments/assets/abb02945-f5a8-4dfe-921d-0e9909f37c4a" />
 
+<img width="486" height="729" alt="Screenshot 2026-02-01 192254" src="https://github.com/user-attachments/assets/7b37c452-b40b-4f6c-91bc-48b3000e250b" />
 
 
 *
 
----<img width="264" height="685" alt="Screenshot 2026-02-01 192340" src="https://github.com/user-attachments/assets/f06b5d17-7263-4451-ab1e-bf40de9c97a5" />
 
 
 ## 🚀 Live Demo
